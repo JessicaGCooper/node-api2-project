@@ -40,27 +40,27 @@ router.get("/:id", (req, res) => {
 });
 
 //post - finish post
-router.post("/", (req, res) => {
-    const {title, contents} = req.body
-    if (!title || !contents) {
-        res.status(400)
-        .json({message: "Please provide the title and contents."})
-    } else {
+// router.post("/", (req, res) => {
+//     const {title, contents} = req.body
+//     if (!title || !contents) {
+//         res.status(400)
+//         .json({message: "Please provide the title and contents."})
+//     } else {
 
-     Model.insert(posts)
-         .then(posts => {
-             res.status(201)
-             .json({posts})
-         })
-         .catch( error => 
-            res
-            .status(500)
-            .json({
-             message: "There was an error while saving the user to the datbase", error
-            })
+//      Model.insert(posts)
+//          .then(posts => {
+//              res.status(201)
+//              .json({posts})
+//          })
+//          .catch( error => 
+//             res
+//             .status(500)
+//             .json({
+//              message: "There was an error while saving the user to the datbase", error
+//             })
      
-    }
-})
+//     }
+// })
 
 
 module.exports = router;
