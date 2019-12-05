@@ -9,6 +9,7 @@ server.use(express.json());
 //use routers
 server.use("/api/posts", postsRouter)
 
+
 server.get("/", (req, res) => {
     res.status(200).json({ message: "hello world"});
 })
